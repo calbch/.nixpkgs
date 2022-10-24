@@ -39,7 +39,7 @@
       # Telescope
       vimPlugins.telescope-nvim
       vimPlugins.telescope-fzf-native-nvim
-      vimPlugins.telescope-file-browser
+      vimPlugins.telescope-file-browser-nvim
 
       # Theming
       vimPlugins.nvim-web-devicons
