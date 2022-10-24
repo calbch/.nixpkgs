@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, darwin, ... }: {
+  outputs = { nixpkgs, home-manager, darwin, ... }@inputs: {
     darwinConfigurations.cal = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [

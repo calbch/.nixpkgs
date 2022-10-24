@@ -1,0 +1,2 @@
+-- vim.g.python_host_prog = "/opt/homebrew/anaconda3/envs/tikzilla/bin/python"
+-- vim.g.python3_host_prog = "/opt/homebrew/anaconda3/envs/tikzilla/bin/python3"

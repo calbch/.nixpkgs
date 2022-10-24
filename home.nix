@@ -2,6 +2,8 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  imports = [ ./home ];
+
   home = {
     stateVersion = "22.05";
     packages = with pkgs; [
@@ -42,11 +44,6 @@
       ];
       userEmail = "caldotdev@proton.me";
       userName = "caldotdev";
-    };
-
-    alacritty = {
-      enable = true;
-      settings = (import ./home/alacritty.nix);
     };
 
     starship = {

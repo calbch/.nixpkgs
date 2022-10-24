@@ -1,0 +1,62 @@
+{
+    "filetype.nvim": {
+        "branch": "main",
+        "description": "A faster version of filetype.vim",
+        "homepage": null,
+        "owner": "nathom",
+        "repo": "filetype.nvim",
+        "rev": "b522628a45a17d58fc0073ffd64f9dc9530a8027",
+        "sha256": "0l2cg7r78qbsbc6n5cvwl5m5lrzyfvazs5z3gf54hspw120nzr87",
+        "type": "tarball",
+        "url": "https://github.com/nathom/filetype.nvim/archive/b522628a45a17d58fc0073ffd64f9dc9530a8027.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "mason-lspconfig.nvim": {
+        "branch": "main",
+        "description": "Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim",
+        "homepage": "",
+        "owner": "williamboman",
+        "repo": "mason-lspconfig.nvim",
+        "rev": "5b510d91041dfe47d6f3f3a102f9faabb3143ced",
+        "sha256": "1gw6gcgq7z0hya9i5b3v0drwq4g6v3mrc35mbv7naz6w7innbhwn",
+        "type": "tarball",
+        "url": "https://github.com/williamboman/mason-lspconfig.nvim/archive/5b510d91041dfe47d6f3f3a102f9faabb3143ced.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "mason.nvim": {
+        "branch": "main",
+        "description": "Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.",
+        "homepage": "",
+        "owner": "williamboman",
+        "repo": "mason.nvim",
+        "rev": "3562d3dfcd8fabcd6425cf8bcaa8185ff558f354",
+        "sha256": "0m45xf5i5ppq8fqmp7b6a7fsvj1w5rr4lgdg29h2v7xh5nb1rp93",
+        "type": "tarball",
+        "url": "https://github.com/williamboman/mason.nvim/archive/3562d3dfcd8fabcd6425cf8bcaa8185ff558f354.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "release-21.05",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f244caea76105b63d826911b2a1563d33ff1cdc",
+        "sha256": "1xlgynfw9svy7nvh9nkxsxdzncv9hg99gbvbwv3gmrhmzc3sar75",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/5f244caea76105b63d826911b2a1563d33ff1cdc.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "prettierd": {
+        "branch": "main",
+        "description": "prettier, as a daemon, for ludicrous formatting speed.",
+        "homepage": "",
+        "owner": "fsouza",
+        "repo": "prettierd",
+        "rev": "041fab1cf5e5bb4e104bf827d4a1403f1ceffffe",
+        "sha256": "1wb6ih09byz6lqfa6kr6ybkrcvs6xc5hq85f4mzbb5bx9flxzzmn",
+        "type": "tarball",
+        "url": "https://github.com/fsouza/prettierd/archive/041fab1cf5e5bb4e104bf827d4a1403f1ceffffe.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
