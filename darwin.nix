@@ -7,12 +7,9 @@ let
   xdg_configHome = "${home}/.config";
 in
 {
+  documentation.enable = false;
   services.nix-daemon.enable = true;
   nix.package = pkgs.nixFlakes;
-
-  nixpkg = {
-    config.allowUnfree = true;
-  };
 
   users.users.cal = {
     name = "cal";
@@ -65,7 +62,7 @@ in
         set -g renumber-windows on    # renumber windows when a window is closed
 
         # Undercurl
-        set -g default-terminal "${TERM}"
+        set -g default-terminal "''\${TERM}"
         set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
         set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 
