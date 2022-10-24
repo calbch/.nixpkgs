@@ -15,17 +15,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, darwin, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, darwin, ... }: {
     darwinConfigurations.cal = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./configuration.nix
+        ./darwin.nix
         home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users = import ./home.nix;
-        }
       ];
     };
   };
