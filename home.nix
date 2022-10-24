@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-
   nixpkgs.config.allowUnfree = true;
 
   home = {
@@ -12,9 +11,13 @@
       fzf
       ripgrep
       tealdeer
+      zoxide
       htop
       tree
       tmux
+      luajit
+      lazygit
+      stow
     ];
   };
 
@@ -44,6 +47,29 @@
     alacritty = {
       enable = true;
       settings = (import ./home/alacritty.nix);
+    };
+
+    starship = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      settings = {
+        cmd_duration = {
+          disabled = true;
+        };
+
+        memory_usage = {
+          disabled = false;
+          format = "\[RAM Usage: [''\${ram_pct}]($style)\] ";
+          treshhold = 80;
+          style = "208";
+        };
+
+        lua = {
+          format = "using [ $symbol ] ($style) ";
+          symbol = "";
+        };
+      };
     };
 
   };

@@ -46,8 +46,7 @@
 
     cursor = {
       style = {
-
-        shape = Block;
+        shape = "Block";
       };
 
     };
@@ -84,7 +83,7 @@
     # colors: *tokyonight
 
     key_bindings = [
-      { key = "A"; mods = "" Alt ""; chars = "\x1ba"; }
+      { key = "A"; mods = "Alt"; chars = "\x1ba"; }
       { key = "B"; mods = "Alt"; chars = "\x1bb"; }
       { key = "C"; mods = "Alt"; chars = "\x1bc"; }
       { key = "D"; mods = "Alt"; chars = "\x1bd"; }
@@ -146,7 +145,7 @@
       { key = "Key8"; mods = "Alt"; chars = "\x1b8"; }
       { key = "Key9"; mods = "Alt"; chars = "\x1b9"; }
       { key = "Key0"; mods = "Alt"; chars = "\x1b0"; }
-      { key = "Space"; mods = Control; chars = "\x00"; } # Ctrl + Space
+      { key = "Space"; mods = "Control"; chars = "\x00"; } # Ctrl + Space
       { key = "Grave"; mods = "Alt"; chars = "\x1b`"; } # Alt + `
       { key = "Grave"; mods = "Alt|Shift"; chars = "\x1b~"; } # Alt + ~
       { key = "Period"; mods = "Alt"; chars = "\x1b."; } # Alt + .

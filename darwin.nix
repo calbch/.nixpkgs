@@ -200,6 +200,8 @@ in
       upgrade = true;
     };
 
+    brews = [ ];
+
     casks = [
       "discord"
       "bitwarden"
