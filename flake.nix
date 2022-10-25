@@ -21,6 +21,7 @@
     let
       overlays = [
         inputs.neovim-nightly-overlay.overlay
+        (import ./home/nvim-overlay.nix)
       ];
     in
     {

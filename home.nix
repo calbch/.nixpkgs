@@ -1,9 +1,5 @@
 { config, pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-
-  # nixpkgs.overlays = [ (import ./home/nvim-overlay.nix) ];
-
   imports = [
     (import ./home/alacritty.nix)
     (import ./home/nvim.nix)

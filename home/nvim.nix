@@ -55,8 +55,8 @@
       vimPlugins.presence-nvim
 
       # Customs
-      # customVim.filetype-nvim
-      # customVim.mason-nvim
+      customVim.filetype-nvim
+      customVim.mason-nvim
       # customVim.mason-lspconfig-nvim
     ];
 
