@@ -4,7 +4,10 @@
 
   # nixpkgs.overlays = [ (import ./home/nvim-overlay.nix) ];
 
-  imports = [ ./home ];
+  imports = [
+    (import ./home/alacritty.nix)
+    (import ./home/nvim.nix)
+  ];
 
   home = {
     stateVersion = "22.05";
