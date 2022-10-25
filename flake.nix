@@ -13,20 +13,29 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, darwin, ... }@inputs: {
-    darwinConfigurations.cal = darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
-      modules = [
-        ./darwin.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.cal = import ./home.nix;
-        }
+  outputs = { self, darwin, home-manager, ... }@inputs:
+    let
+      overlays = [
+        inputs.neovim-nightly-overlay.overlay
       ];
+    in
+    {
+      darwinConfigurations.cal = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [
+          ./darwin.nix
+          home-manager.darwinModules.home-manager
+          {
+            nixpkgs.overlays = overlays;
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.cal = import ./home.nix;
+          }
+        ];
+      };
     };
-  };
 }

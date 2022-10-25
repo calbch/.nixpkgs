@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {
@@ -55,9 +55,9 @@
       vimPlugins.presence-nvim
 
       # Customs
-      customVim.filetype-nvim
-      customVim.mason-nvim
-      customVim.mason-lspconfig-nvim
+      # customVim.filetype-nvim
+      # customVim.mason-nvim
+      # customVim.mason-lspconfig-nvim
     ];
 
     extraPackages = with pkgs; [
@@ -65,10 +65,16 @@
       sumneko-lua-language-server
       stylua
       rnix-lsp
-      nodePackages.eslint_d
-      nodePackages.typescript-language-server
-      nodePackages.tailwindcss-language-server
-      customVim.prettierd
+      nodePackages."eslint_d"
+      nodePackages."typescript-language-server"
+      nodePackages."@tailwindcss/language-server"
+      # customVim.prettierd
     ];
+  };
+
+  home.file."nvim" = {
+    source = ../config/nvim;
+    recursive = true;
+    target = "/Users/cal/.config/nvim";
   };
 }

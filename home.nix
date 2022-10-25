@@ -2,6 +2,8 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  # nixpkgs.overlays = [ (import ./home/nvim-overlay.nix) ];
+
   imports = [ ./home ];
 
   home = {
