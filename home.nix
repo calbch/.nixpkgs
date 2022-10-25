@@ -22,11 +22,31 @@
       lazygit
       stow
     ];
+
+    shellAliases = {
+      ls = "exa -aF --group-directories-first --color=always --icons";
+      la = "exa -alF --group-directories-first --color=always --icons";
+      ll = "exa -lF --group-directories-first";
+      lt = "exa -aTF --level=2 --group-directories-first --icons --color=always";
+      ldot = "exa -a | egrep ''\"^\.''\"";
+      cat = "bat";
+      grep = "ripgrep";
+    };
   };
 
   programs = {
     # allow Home Manager to install and manage itself
     home-manager.enable = true;
+
+    zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" "tmux" "" ];
+      };
+    };
 
     git = {
       enable = true;
@@ -59,7 +79,7 @@
         memory_usage = {
           disabled = false;
           format = "\[RAM Usage: [''\${ram_pct}]($style)\] ";
-          treshhold = 80;
+          threshold = 80;
           style = "208";
         };
 

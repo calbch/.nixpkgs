@@ -22,11 +22,6 @@ in
   ];
 
   programs = {
-    zsh = {
-      enable = true;
-      enableFzfHistory = true;
-    };
-
     tmux = {
       enable = true;
       enableFzf = true;
