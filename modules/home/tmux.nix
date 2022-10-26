@@ -3,9 +3,6 @@
 {
     programs.tmux = {
       enable = true;
-      enableFzf = true;
-      enableSensible = true;
-      enableVim = true;
       extraConfig = ''
         bind-key r source-file ${config.xdg.configHome}/tmux/tmux.conf \; display-message "~/.tmux.conf reloaded."
 

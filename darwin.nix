@@ -2,24 +2,22 @@
 
 {
   documentation.enable = false;
-
   security.pam.enableSudoTouchIdAuth = true;
-
-  imports import ./modules/darwin/defaults.nix;
-
-  nix.package = pkgs.nixFlakes;
-
   environment.shells = [ pkgs.zsh ];
-
-  # Services
   services.nix-daemon.enable = true;
-  import ./modules/darwin/wm.nix; # Window Management
 
-  # Programs
-  # mostly managed in home.nix
+  programs.tmux = {
+    enable = true;
+    enableFzf = true;
+    enableSensible = true;
+    enableVim = true;
+  };
 
-  # Homebrew
-  import ./modules/darwin/brew.nix;
+  imports = [ 
+    ./modules/darwin/defaults.nix   # System Defaults & Settings
+    ./modules/darwin/wm.nix         # Window Management
+    ./modules/darwin/brew.nix       # Homebrew Packages
+     ];
 
   # Users
   users.users.cal = {

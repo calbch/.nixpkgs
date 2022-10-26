@@ -73,7 +73,7 @@
   };
 
   home.file."nvim" = {
-    source = ../config/nvim;
+    source = ../../config/nvim;
     recursive = true;
     target = "/Users/cal/.config/nvim";
   };

@@ -1,6 +1,6 @@
 self: super:
 
-let sources = import ../nix/sources.nix;
+let sources = import ../../nix/sources.nix;
 in
 {
   customVim = with self; {
@@ -21,8 +21,4 @@ in
     };
 
   };
-
-  # customLsp = with self; {
-  #   prettierd = pkgs.nodePackages
-  #   };
 }

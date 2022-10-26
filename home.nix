@@ -1,21 +1,27 @@
 { config, pkgs, ... }:
 
 {
-  # Programs
-  import ./modules/home/alacritty.nix;
-  programs.bat.enable = true;
-  programs.exa.enable = true;
-  programs.fzf.enable = true;
-  import ./modules/home/git.nix;
-  programs.home-manager.enable = true; # allow home-manager to manage itself
-  programs.htop.enable = true;
-  programs.lazygit.enable = true;
-  import ./modules/home/neovim.nix;
-  import ./modules/home/starship.nix;
-  programs.tealdeer.enable = true;
-  import ./modules/home/tmux.nix;
-  programs.zoxide.enable = true;
-  import ./modules/home/zsh.nix;
+  nix.package = pkgs.nixFlakes;
+  nix.extraOptions="experimental-features = nix-command flakes";
+
+  programs = {
+    bat.enable = true;
+    exa.enable = true;
+    fzf.enable = true;
+    home-manager.enable = true; # allow home-manager to manage itself
+    htop.enable = true;
+    lazygit.enable = true;
+    tealdeer.enable = true;
+    zoxide.enable = true;
+  };
+
+  imports = [
+    ./modules/home/alacritty.nix
+    ./modules/home/neovim.nix
+    ./modules/home/starship.nix
+    ./modules/home/tmux.nix
+    ./modules/home/zsh.nix
+  ];
 
   home = {
     stateVersion = "22.05";
